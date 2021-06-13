@@ -114,7 +114,6 @@ if __name__ == "__main__":
     ### 加载netp模型的原型
     net = load_model(model_name='resnet50_pmg', pretrain=True, require_grad=True)
 
-
     ### DataParallel化
     net = nn.DataParallel(net,device_ids=[0])
     ### 一定要先net.module
